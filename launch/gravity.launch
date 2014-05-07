@@ -1,11 +1,8 @@
 <launch>
   <param name="robot_description" command="cat $(find hrp2_14_description)/urdf/hrp2_14_capsule.urdf"/>
-  <param name="gravity_description" command="cat $(find gravity_description)/gravity_decor.urdf"/>
-  
-  <node name="obstacle_base_link_broadcaster"
-    pkg="tf" type="static_transform_publisher"  
-    args="0 0 0 0 0 0 /map /obstacle_base 200"/>    
-  
+  <param name="gravity_description" command="cat $(find gravity_description)/urdf/gravity_decor.urdf"/>
+  <param name="emu_description" command="cat $(find gravity_description)/urdf/emu.urdf"/>
+   
   <node name="odom_link_broadcaster"
         pkg="tf" type="static_transform_publisher"  
         args="0 0 0 0 0 0 /map /odom 200"/>
