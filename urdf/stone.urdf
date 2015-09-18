@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<robot name="gravity_description">
+  <link name="obstacle_base">
+    <visual>
+      <origin xyz="10 5 6" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://gravity_description/meshes/one_stone.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="10 5 6" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://gravity_description/meshes/one_stone.dae"/>
+      </geometry>
+    </collision>
+  </link>
+</robot>
